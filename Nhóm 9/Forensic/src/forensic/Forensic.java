@@ -9,9 +9,12 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Scanner;
 
-public class Forensic {
-    public static void main(String[] args) throws IOException{
-        File fileOrDir = new File("C:\\Users\\user\\Documents\\NetBeansProjects\\my-first-project\\Forensic\\testforensic");
+public class Forensic 
+{
+    public static void main(String[] args) throws IOException
+    {
+        // sửa lại đường dẫn tùy vào máy tính
+        File fileOrDir = new File("C:\\Users\\user\\Documents\\NetBeansProjects\\my-first-project\\Nhóm 9\\Forensic\\testforensic");
         Forensic myFiles = new Forensic();
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập từ khóa tìm kiếm: ");
@@ -19,7 +22,8 @@ public class Forensic {
         myFiles.traverseDepthFiles(fileOrDir, search);
     }
      
-    public void traverseDepthFiles(final File fileOrDir, String search) throws FileNotFoundException, IOException {
+    public void traverseDepthFiles(final File fileOrDir, String search) throws FileNotFoundException, IOException
+    {
         // check xem fileOrDir là file hay foder
         if (fileOrDir.isDirectory()) 
         {
